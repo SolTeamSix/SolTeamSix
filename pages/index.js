@@ -18,11 +18,20 @@ export default function Home() {
 
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [navbar, setNavbar] = useState('');
 
   const title = 'Sol Team Six';
   const description =
     '6,000 uniquely generated operators commissioned to serve and protect the solana ecosystem at all cost.';
   const image = 'https://solteamsix.io/images/meta.png';
+
+  const handleScroll = () => {
+    if (window.scrollY >= 100) {
+      setNavbar('scrolled');
+    } else {
+      setNavbar('');
+    }
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -31,6 +40,12 @@ export default function Home() {
       document.body.style.overflow = '';
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -93,7 +108,23 @@ export default function Home() {
       </Head>
 
       <main className='relative overflow-hidden'>
-        <nav className='flex flex-row items-center absolute top-0 left-0 w-full px-2 lg:px-6 z-10'>
+        <div className='bg' />
+        <div className='fixed w-screen h-screen z-20 pointer-events-none'>
+          <img
+            src='/images/alien.png'
+            className='hidden lg:block absolute bottom-10 left-0 alien'
+            alt='Alien'
+          />
+          <img
+            src='/images/human.png'
+            className='hidden lg:block absolute top-7 right-0 human'
+            alt='Human'
+          />
+        </div>
+
+        <nav
+          className={`flex flex-row items-center fixed top-0 left-0 w-full px-2 lg:px-6 z-10 ${navbar}`}
+        >
           <div className='flex flex-row items-center justify-between w-full'>
             <NextLink href='/'>
               <a
@@ -140,16 +171,6 @@ export default function Home() {
             the solana ecosystem at all cost.
           </p>
           <Countdown handleComplete={() => setIsActive(true)} />
-          <img
-            src='/images/alien.png'
-            className='hidden lg:block absolute bottom-10 left-0 alien'
-            alt='Alien'
-          />
-          <img
-            src='/images/human.png'
-            className='hidden lg:block absolute top-7 right-0 z-20 human'
-            alt='Human'
-          />
         </div>
 
         <div id='story' className='px-4 mt-10 lg:mt-20'>

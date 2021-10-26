@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-  height: 100px;
+  height: 80px;
 }
 
 h1 {
@@ -35,9 +35,18 @@ ul > li {
   width: 80px;
 }
 
-.hero {
+.bg {
   background-image: url('/images/hero.png');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
+.hero {
   height: 600px;
 }
 
@@ -63,7 +72,6 @@ ul > li {
 
 .human {
   height: 500px;
-  pointer-events: none;
 }
 
 .countdown {
@@ -94,6 +102,10 @@ ul > li {
   color: #1d9bf0;
 }
 
+.scrolled {
+  background-color: rgba(0,0,0,0.9);
+}
+
 #team, #story, #roadmap, #faq, #charities {
   scroll-margin-top: 20px;
 }
@@ -104,12 +116,12 @@ ul > li {
     line-height: 1;
   }
 
-  .logo {
-    width: 100px;
+  nav {
+    height: 100px;
   }
 
-  .hero {
-    height: 800px;
+  .logo {
+    width: 100px;
   }
 
   .links {
