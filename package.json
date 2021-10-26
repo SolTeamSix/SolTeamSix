@@ -1,0 +1,39 @@
+{
+  "name": "solteamsix-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prettify": "prettier --write '**/*.{js,jsx}'",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@project-serum/anchor": "^0.18.0",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/wallet-adapter-base": "^0.7.0",
+    "@solana/wallet-adapter-phantom": "^0.7.0",
+    "@solana/wallet-adapter-react": "^0.13.1",
+    "@solana/wallet-adapter-react-ui": "^0.6.0",
+    "@solana/web3.js": "^1.30.1",
+    "next": "^12.0.0",
+    "react": "^17.0.2",
+    "react-countdown": "^2.3.2",
+    "react-dom": "^17.0.2",
+    "react-toastify": "^8.0.3"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.3.7",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.5",
+    "next-transpile-modules": "^8.0.0",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.17"
+  }
+}
