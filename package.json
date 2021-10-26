@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@project-serum/anchor": "^0.18.0",
+    "@reach/disclosure": "^0.16.2",
     "@solana/spl-token": "^0.1.8",
     "@solana/wallet-adapter-base": "^0.7.0",
     "@solana/wallet-adapter-phantom": "^0.7.0",

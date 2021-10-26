@@ -1,3 +1,12 @@
+import { useState } from 'react';
+import {
+  Disclosure,
+  DisclosurePanel,
+  DisclosureButton,
+} from '@reach/disclosure';
+
+import ArrowIcon from '../icons/arrow.svg';
+
 export const items = [
   {
     question: 'What is an NFT?',
@@ -33,12 +42,27 @@ export const items = [
 ];
 
 const FAQItem = ({ question, children }) => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div className='flex flex-col w-full max-w-2xl mx-auto mt-14'>
-      <span className='w-max mx-auto text-center font-bold text-lg'>
-        {question}
-      </span>
-      <p className='text-center font-bold text-lg mt-6'>{children}</p>
+      <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
+        <DisclosureButton
+          className='w-max mx-auto text-center font-bold text-lg flex flex-row justify-center items-center'
+          aria-label={question}
+        >
+          {question}
+          <ArrowIcon
+            width={20}
+            className={`ml-3 md:ml-6 transform ${
+              isOpen ? 'rotate-180' : 'rotate-0'
+            }`}
+          />
+        </DisclosureButton>
+        <DisclosurePanel>
+          <p className='text-center font-bold text-lg mt-6'>{children}</p>
+        </DisclosurePanel>
+      </Disclosure>
     </div>
   );
 };
