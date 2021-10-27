@@ -48,7 +48,7 @@ const FAQItem = ({ question, children }) => {
     <div className='flex flex-col w-full max-w-2xl mx-auto mt-14'>
       <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
         <DisclosureButton
-          className='w-max mx-auto text-center font-bold text-lg flex flex-row justify-center items-center'
+          className='w-max mx-auto text-center font-bold text-lg flex flex-row justify-center items-center focus:outline-none'
           aria-label={question}
         >
           {question}
