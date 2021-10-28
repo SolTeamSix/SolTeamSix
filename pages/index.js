@@ -13,18 +13,19 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className='hero flex flex-col relative'>
-        <h1 className='font-black text-center opacity-70 mt-36 md:mt-36 px-4'>
-          Sol Team Six
-        </h1>
-        <p className='font-semibold text-xl text-center opacity-70 mx-auto mt-8 px-4 w-full max-w-xs lg:max-w-none'>
+      <div className='flex flex-col relative'>
+        <img
+          src='/images/solteamsix.png'
+          className='solteamsix mx-auto opacity-60 mt-36 px-4'
+        />
+        <p className='font-bold text-2xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl'>
           6,000 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
         </p>
         <Countdown handleComplete={() => setIsActive(true)} />
       </div>
 
-      <div id='story' className='px-4 mt-10 lg:mt-20'>
+      <div id='story' className='px-4 mt-20 lg:mt-40'>
         <p className='font-black text-center text-4xl'>The Story so far.</p>
         <div className='story opacity-50 w-full max-w-4xl mt-8 mx-auto' />
       </div>

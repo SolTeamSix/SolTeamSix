@@ -2,11 +2,11 @@ import Countdown, { zeroPad } from 'react-countdown';
 
 const renderCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <div className='countdown w-min mx-auto opacity-70 mt-20'>
-      <p className='text-center text-4xl font-black'>
+    <div className='countdown w-min mx-auto mt-8 rounded py-2'>
+      <p className='text-center text-4xl font-medium opacity-50'>
         {days}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
       </p>
-      <p className='text-center text-4xl font-black'>Till Mint</p>
+      <p className='text-center text-xl font-medium'>TILL MINT</p>
     </div>
   );
 };
