@@ -14,7 +14,7 @@ const NavLinks = ({ onClose = null }) => {
           <li>
             <a
               href='#team'
-              className='w-full px-2 mx-4 my-3 text-xl font-bold opacity-70 hover:opacity-100'
+              className='w-full px-2 mx-4 my-3 text-2xl font-bold opacity-70 hover:opacity-100'
               onClick={() => onClose && onClose()}
             >
               Our Team
@@ -23,7 +23,7 @@ const NavLinks = ({ onClose = null }) => {
           <li>
             <a
               href='#story'
-              className='w-full px-2 mx-4 my-3 text-xl font-bold opacity-70 hover:opacity-100'
+              className='w-full px-2 mx-4 my-3 text-2xl font-bold opacity-70 hover:opacity-100'
               onClick={() => onClose && onClose()}
             >
               Story
@@ -32,7 +32,7 @@ const NavLinks = ({ onClose = null }) => {
           <li>
             <a
               href='#roadmap'
-              className='w-full px-2 mx-4 my-3 text-xl font-bold opacity-70 hover:opacity-100'
+              className='w-full px-2 mx-4 my-3 text-2xl font-bold opacity-70 hover:opacity-100'
               onClick={() => onClose && onClose()}
             >
               Roadmap
@@ -41,7 +41,7 @@ const NavLinks = ({ onClose = null }) => {
           <li>
             <a
               href='#faq'
-              className='w-full px-2 mx-4 my-3 text-xl font-bold opacity-70 hover:opacity-100'
+              className='w-full px-2 mx-4 my-3 text-2xl font-bold opacity-70 hover:opacity-100'
               onClick={() => onClose && onClose()}
             >
               FAQ
@@ -50,7 +50,7 @@ const NavLinks = ({ onClose = null }) => {
           <li>
             <a
               href='#charities'
-              className='w-full px-2 mx-4 my-3 text-xl font-bold opacity-70 hover:opacity-100'
+              className='w-full px-2 mx-4 my-3 text-2xl font-bold opacity-70 hover:opacity-100'
               onClick={() => onClose && onClose()}
             >
               Charities

@@ -18,7 +18,7 @@ export default function Home() {
           src='/images/solteamsix.png'
           className='solteamsix mx-auto opacity-60 mt-36 px-4'
         />
-        <p className='font-bold text-2xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl'>
+        <p className='font-bold text-3xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl'>
           6,000 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
         </p>
@@ -26,7 +26,7 @@ export default function Home() {
       </div>
 
       <div id='story' className='px-4 mt-20 lg:mt-40'>
-        <p className='font-black text-center text-4xl'>The Story so far.</p>
+        <p className='font-black text-center text-5xl'>The Story so far.</p>
         <div className='story opacity-50 w-full max-w-4xl mt-8 mx-auto' />
       </div>
 
@@ -40,7 +40,7 @@ export default function Home() {
           >
             <img src='/images/wwp.png' alt='Wounded Warrior Project' />
           </a>
-          <p className='w-full max-w-xs text-lg font-bold text-center mt-4 lg:mt-0'>
+          <p className='w-full max-w-xs text-xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to Wounded Warrior Project, a non
             profit organization that supports soldiers who incur injuries
             (physical or mental), illnesses, or wounds, while in the line of
@@ -55,7 +55,7 @@ export default function Home() {
           >
             <img src='/images/agsf.png' alt="America's Gold Start Families" />
           </a>
-          <p className='w-full max-w-xs text-lg font-bold text-center mt-4 lg:mt-0'>
+          <p className='w-full max-w-xs text-xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to America’s Gold Star Families, A
             non profit organization that supports family and friends of soldiers
             who die in the line of duty. The organization provides honor and
@@ -101,7 +101,7 @@ export default function Home() {
       </div>
 
       <div id='team' className='px-4 mt-20 lg:mt-40'>
-        <p className='font-black text-center text-4xl'>Our Team</p>
+        <p className='font-black text-center text-5xl'>Our Team</p>
         <div className='flex flex-col md:flex-row justify-center items-center mt-14'>
           <div className='flex flex-col justify-center items-center md:mr-4'>
             <img
@@ -109,7 +109,7 @@ export default function Home() {
               className='team'
               alt='Fleet Admiral Juke'
             />
-            <span className='font-bold'>Fleet Admiral Juke</span>
+            <span className='font-bold text-xl'>Fleet Admiral Juke</span>
           </div>
           <div className='flex flex-col justify-center items-center mt-4 md:mt-0 md:ml-4'>
             <img
@@ -117,7 +117,7 @@ export default function Home() {
               className='team'
               alt='Fleet Admiral Yojo'
             />
-            <span className='font-bold'>Fleet Admiral Yojo</span>
+            <span className='font-bold text-xl'>Fleet Admiral Yojo</span>
           </div>
         </div>
       </div>

@@ -58,6 +58,11 @@ ul > li {
   padding: 0 30px !important;
   height: 40px !important;
   font-family: 'Darker Grotesque', sans-serif !important;
+  font-size: 18px !important;
+}
+
+.wallet-adapter-dropdown-list-item {
+  font-size: 18px !important;
 }
 
 .wallet-adapter-button[disabled] {
@@ -78,7 +83,7 @@ ul > li {
 
 .countdown {
   background-color: rgba(18,58,117,0.5);
-  width: 230px;
+  width: 250px;
 }
 
 .story {
