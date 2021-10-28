@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 import Countdown from '../components/Countdown';
 import Title from '../components/Title';
+import Carousel from '../components/Carousel';
 import RoadmapPhase, { phases } from '../components/RoadmapPhase';
 import FAQItem, { items } from '../components/FAQItem';
 import DiscordIcon from '../icons/discord.svg';
@@ -24,6 +25,8 @@ export default function Home() {
         </p>
         <Countdown handleComplete={() => setIsActive(true)} />
       </div>
+
+      <Carousel />
 
       <div id='story' className='px-4 mt-20 lg:mt-40'>
         <p className='font-black text-center text-5xl'>The Story so far.</p>
