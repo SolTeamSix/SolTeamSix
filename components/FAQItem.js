@@ -23,11 +23,10 @@ export const items = [
     answer:
       'All operators and attributes are drawn by hand and algorithmically generated using custom code. There will be 100+ attributes including background, mask, eyes, mouth, weapon, hands, head, and more. Operators will be created using a smart contract deployed on the Solana blockchain. To ensure a smooth and safe launch this will be done using the Metaplex Candy Machine.',
   },
-  // Todo: Mint price TBD
   {
     question: 'What is the cost to mint a Sol Team Six?',
     answer:
-      'Mint price TBD. We are working hard to bring you an awesome launch and still have not decided on a price for mint just yet. We have been listening to the community and will settle on a mint price shortly. We will be sure to let you know as soon as possible what the mint price is!',
+      'The current mint price is set at .8 SOL, price is subject to change due to market fluctuation.',
   },
   {
     question: 'What do I get with my Sol Team Six NFT?',
