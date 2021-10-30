@@ -32,6 +32,8 @@ export default function Home() {
         <p className='font-black text-center text-6xl'>The Story so far.</p>
         <div className='story w-full max-w-4xl mt-8 mx-auto p-8'>
           <p className='text-2xl font-bold text-center'>
+            UH OH!
+            <br />
             The story’s not finished yet! At the moment we are working with our
             community members to help get the story just right. We do not want
             to rush the process as the story will be the foundation for our
