@@ -48,10 +48,10 @@ const FAQItem = ({ question, children }) => {
     <div className='flex flex-col w-full max-w-2xl mx-auto mt-14'>
       <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
         <DisclosureButton
-          className='w-max mx-auto text-center font-bold text-xl flex flex-row justify-center items-center focus:outline-none'
+          className='w-full mx-auto text-left text-2xl flex flex-row justify-center items-center focus:outline-none'
           aria-label={question}
         >
-          {question}
+          <strong className='w-11/12'>{question}</strong>
           <ArrowIcon
             width={20}
             className={`ml-3 md:ml-6 transform ${
@@ -60,7 +60,7 @@ const FAQItem = ({ question, children }) => {
           />
         </DisclosureButton>
         <DisclosurePanel>
-          <p className='text-center font-bold text-xl mt-6'>{children}</p>
+          <p className='text-center font-bold text-2xl mt-6'>{children}</p>
         </DisclosurePanel>
       </Disclosure>
     </div>

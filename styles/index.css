@@ -87,9 +87,8 @@ ul > li {
 }
 
 .story {
-  height: 600px;
   border-radius: 40px;
-  background-color: #3C3C4C;
+  background-color: rgba(60,60,76,0.5);
 }
 
 .phase {
@@ -97,8 +96,8 @@ ul > li {
 }
 
 .team {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 400px;
 }
 
 .discord {

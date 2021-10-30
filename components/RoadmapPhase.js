@@ -20,10 +20,10 @@ export const phases = [
 const RoadmapPhase = ({ title, children }) => {
   return (
     <div className='flex flex-col w-full max-w-2xl mx-auto mt-14'>
-      <p className='mx-auto text-center font-bold text-xl px-2 pb-1 rounded-lg phase'>
+      <p className='mx-auto text-center font-bold text-2xl px-2 pb-1 rounded-lg phase'>
         {title}
       </p>
-      <p className='text-center font-bold text-xl mt-6'>{children}</p>
+      <p className='text-center font-bold text-2xl mt-6'>{children}</p>
     </div>
   );
 };

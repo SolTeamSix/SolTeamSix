@@ -29,8 +29,25 @@ export default function Home() {
       <Carousel />
 
       <div id='story' className='px-4 mt-20 lg:mt-40'>
-        <p className='font-black text-center text-5xl'>The Story so far.</p>
-        <div className='story opacity-50 w-full max-w-4xl mt-8 mx-auto' />
+        <p className='font-black text-center text-6xl'>The Story so far.</p>
+        <div className='story w-full max-w-4xl mt-8 mx-auto p-8'>
+          <p className='text-2xl font-bold text-center'>
+            The story’s not finished yet! At the moment we are working with our
+            community members to help get the story just right. We do not want
+            to rush the process as the story will be the foundation for our
+            comic book series! If you are interested in helping us create an
+            epic storyline, join us on{' '}
+            <a
+              href='https://discord.gg/solteamsix'
+              target='_blank'
+              rel='noreferrer'
+              className='text-blue-400'
+            >
+              Discord
+            </a>{' '}
+            and check out #story-submissions.
+          </p>
+        </div>
       </div>
 
       <div id='charities' className='px-4 mt-20 lg:mt-40'>
@@ -43,7 +60,7 @@ export default function Home() {
           >
             <img src='/images/wwp.png' alt='Wounded Warrior Project' />
           </a>
-          <p className='w-full max-w-xs text-xl font-bold text-center mt-4 lg:mt-0'>
+          <p className='w-full max-w-xs text-2xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to Wounded Warrior Project, a non
             profit organization that supports soldiers who incur injuries
             (physical or mental), illnesses, or wounds, while in the line of
@@ -58,7 +75,7 @@ export default function Home() {
           >
             <img src='/images/agsf.png' alt="America's Gold Start Families" />
           </a>
-          <p className='w-full max-w-xs text-xl font-bold text-center mt-4 lg:mt-0'>
+          <p className='w-full max-w-xs text-2xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to America’s Gold Star Families, A
             non profit organization that supports family and friends of soldiers
             who die in the line of duty. The organization provides honor and
@@ -112,7 +129,7 @@ export default function Home() {
               className='team'
               alt='Fleet Admiral Juke'
             />
-            <span className='font-bold text-xl'>Fleet Admiral Juke</span>
+            <span className='font-bold text-2xl mt-2'>Fleet Admiral Juke</span>
           </div>
           <div className='flex flex-col justify-center items-center mt-4 md:mt-0 md:ml-4'>
             <img
@@ -120,7 +137,7 @@ export default function Home() {
               className='team'
               alt='Fleet Admiral Yojo'
             />
-            <span className='font-bold text-xl'>Fleet Admiral Yojo</span>
+            <span className='font-bold text-2xl mt-2'>Fleet Admiral Yojo</span>
           </div>
         </div>
       </div>
