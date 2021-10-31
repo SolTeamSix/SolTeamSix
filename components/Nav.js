@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import NextLink from 'next/link';
+import NextImage from 'next/image';
 
 import ConnectButton from '../components/ConnectButton';
 import HamburgerButton from '../components/HamburgerButton';
@@ -41,7 +42,12 @@ const Nav = () => {
             title='Sol Team Six Logo'
             className='flex justify-center logo'
           >
-            <img src='/images/logo.png' alt='Sol Team Six Logo' />
+            <NextImage
+              alt='Sol Team Six Logo'
+              src='/images/logo.png'
+              width={218}
+              height={166}
+            />
           </a>
         </NextLink>
         <div className='hidden lg:block'>

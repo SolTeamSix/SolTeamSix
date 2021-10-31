@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import NextImage from 'next/image';
 
 import Layout from '../components/Layout';
 import Countdown from '../components/Countdown';
@@ -15,10 +16,14 @@ export default function Home() {
   return (
     <Layout>
       <div className='flex flex-col relative'>
-        <img
-          src='/images/solteamsix.png'
-          className='solteamsix mx-auto opacity-60 mt-36 px-4'
-        />
+        <div className='solteamsix mx-auto opacity-60 mt-36 px-4'>
+          <NextImage
+            alt='Sol Team Six Title'
+            src='/images/solteamsix.png'
+            width={800}
+            height={447}
+          />
+        </div>
         <p className='font-bold text-3xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl'>
           6,000 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
@@ -60,7 +65,12 @@ export default function Home() {
             target='_blank'
             rel='noreferrer'
           >
-            <img src='/images/wwp.png' alt='Wounded Warrior Project' />
+            <NextImage
+              alt='Wounded Warrior Project'
+              src='/images/wwp.png'
+              width={220}
+              height={196}
+            />
           </a>
           <p className='w-full max-w-xs text-2xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to Wounded Warrior Project, a non
@@ -75,7 +85,12 @@ export default function Home() {
             target='_blank'
             rel='noreferrer'
           >
-            <img src='/images/agsf.png' alt="America's Gold Start Families" />
+            <NextImage
+              alt="America's Gold Start Families"
+              src='/images/agsf.png'
+              width={245}
+              height={138}
+            />
           </a>
           <p className='w-full max-w-xs text-2xl font-bold text-center mt-4 lg:mt-0'>
             Donation of 10% of total sales to America’s Gold Star Families, A
@@ -108,6 +123,7 @@ export default function Home() {
             href='https://discord.gg/solteamsix'
             target='_blank'
             rel='noreferrer'
+            aria-label='Discord'
           >
             <DiscordIcon width={40} />
           </a>
@@ -116,6 +132,7 @@ export default function Home() {
             href='https://twitter.com/solteamsix'
             target='_blank'
             rel='noreferrer'
+            aria-label='Twitter'
           >
             <TwitterIcon width={40} />
           </a>
@@ -126,18 +143,20 @@ export default function Home() {
         <p className='font-black text-center text-5xl'>Our Team</p>
         <div className='flex flex-col md:flex-row justify-center items-center mt-14'>
           <div className='flex flex-col justify-center items-center md:mr-4'>
-            <img
-              src='/images/team1.png'
-              className='team'
+            <NextImage
               alt='Fleet Admiral Juke'
+              src='/images/team1.png'
+              width={314}
+              height={400}
             />
             <span className='font-bold text-2xl mt-2'>Fleet Admiral Juke</span>
           </div>
           <div className='flex flex-col justify-center items-center mt-4 md:mt-0 md:ml-4'>
-            <img
-              src='/images/team2.png'
-              className='team'
+            <NextImage
               alt='Fleet Admiral Yojo'
+              src='/images/team2.png'
+              width={314}
+              height={400}
             />
             <span className='font-bold text-2xl mt-2'>Fleet Admiral Yojo</span>
           </div>

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import NextImage from 'next/image';
 
 import Nav from './Nav';
 import Footer from './Footer';
@@ -65,26 +66,27 @@ const Layout = ({ children }) => {
           sizes='180x180'
         />
         <link rel='manifest' href={`/favicons/site.webmanifest`} />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap'
-          rel='stylesheet'
-        />
       </Head>
 
       <main className='relative overflow-hidden'>
         <div className='bg' />
         <div className='fixed w-screen h-screen z-20 pointer-events-none'>
-          <img
-            src='/images/alien.png'
-            className='hidden lg:block absolute bottom-10 left-0 alien'
-            alt='Alien'
-          />
-          <img
-            src='/images/human.png'
-            className='hidden lg:block absolute top-7 right-0 human'
-            alt='Human'
-          />
+          <div className='hidden lg:block absolute bottom-10 left-0 alien'>
+            <NextImage
+              alt='Alien'
+              src='/images/alien.png'
+              width={181}
+              height={500}
+            />
+          </div>
+          <div className='hidden lg:block absolute top-7 right-0 human'>
+            <NextImage
+              alt='Human'
+              src='/images/human.png'
+              width={141}
+              height={500}
+            />
+          </div>
         </div>
 
         <Nav />
