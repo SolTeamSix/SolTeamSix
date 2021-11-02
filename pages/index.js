@@ -144,21 +144,30 @@ export default function Home() {
         <div className='flex flex-col md:flex-row justify-center items-center mt-14'>
           <div className='flex flex-col justify-center items-center md:mr-4'>
             <NextImage
-              alt='Fleet Admiral Juke'
-              src='/images/team1.png'
-              width={314}
+              alt='Admiral Juke'
+              src='/images/nft2.png'
+              width={359}
               height={400}
             />
-            <span className='font-bold text-2xl mt-2'>Fleet Admiral Juke</span>
+            <span className='font-bold text-2xl mt-2'>Admiral Juke</span>
+          </div>
+          <div className='flex flex-col justify-center items-center mt-4 md:mt-0 md:mx-4'>
+            <NextImage
+              alt='Admiral Yojo'
+              src='/images/nft4.png'
+              width={359}
+              height={400}
+            />
+            <span className='font-bold text-2xl mt-2'>Admiral Yojo</span>
           </div>
           <div className='flex flex-col justify-center items-center mt-4 md:mt-0 md:ml-4'>
             <NextImage
-              alt='Fleet Admiral Yojo'
-              src='/images/team2.png'
-              width={314}
+              alt='Admiral Hogie'
+              src='/images/nft1.png'
+              width={359}
               height={400}
             />
-            <span className='font-bold text-2xl mt-2'>Fleet Admiral Yojo</span>
+            <span className='font-bold text-2xl mt-2'>Admiral Hogie</span>
           </div>
         </div>
       </div>
