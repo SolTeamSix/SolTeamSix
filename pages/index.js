@@ -28,7 +28,7 @@ export default function Home() {
           6,000 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
         </p>
-        <Countdown handleComplete={() => setIsActive(true)} />
+        {/* <Countdown handleComplete={() => setIsActive(true)} /> */}
       </div>
 
       <Carousel />
