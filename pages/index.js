@@ -45,7 +45,7 @@ export default function Home() {
             comic book series! If you are interested in helping us create an
             epic storyline, join us on{' '}
             <a
-              href='https://discord.gg/solteamsix'
+              href='https://discord.gg/sTWdnq64'
               target='_blank'
               rel='noreferrer'
               className='text-blue-400'
@@ -120,7 +120,7 @@ export default function Home() {
         <div className='flex flex-row justify-center items-center mt-10'>
           <a
             className='mr-4 discord'
-            href='https://discord.gg/solteamsix'
+            href='https://discord.gg/sTWdnq64'
             target='_blank'
             rel='noreferrer'
             aria-label='Discord'
