@@ -26,7 +26,7 @@ export const items = [
   {
     question: 'What is the cost to mint a Sol Team Six?',
     answer:
-      'The current mint price is set at .8 SOL, price is subject to change due to market fluctuation.',
+      'The current mint price is set at .5 SOL, price is subject to change due to market fluctuation.',
   },
   {
     question: 'What do I get with my Sol Team Six NFT?',
