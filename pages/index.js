@@ -25,7 +25,7 @@ export default function Home() {
           />
         </div>
         <p className='font-bold text-3xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl'>
-          6,000 uniquely generated operators commissioned to serve and protect
+          1,006 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
         </p>
         {/* <Countdown handleComplete={() => setIsActive(true)} /> */}
