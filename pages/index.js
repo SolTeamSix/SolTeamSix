@@ -43,14 +43,6 @@ export default function Home({ wallets }) {
   const [candyMachine, setCandyMachine] = useState();
 
   const handleMint = async () => {
-    console.log(wallets);
-    if (!wallets.includes(base58)) {
-      toast.error('You are not allowed to mint during the pre-sale', {
-        position: toast.POSITION.BOTTOM_LEFT,
-      });
-      return;
-    }
-
     try {
       if (wallet && candyMachine.program) {
         setIsMinting(true);
