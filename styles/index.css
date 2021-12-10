@@ -61,6 +61,20 @@ ul > li {
   font-size: 18px !important;
 }
 
+.mint {
+  background-color: #8D74D6 !important;
+  border-radius: 15px !important;
+  padding: 0 30px !important;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  height: 40px !important;
+  font-family: 'Darker Grotesque', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
 .wallet-adapter-dropdown-list-item {
   font-size: 18px !important;
 }

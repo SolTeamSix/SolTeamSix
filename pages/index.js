@@ -1,5 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NextImage from 'next/image';
+import {
+  useConnection,
+  useAnchorWallet,
+  useWallet,
+} from '@solana/wallet-adapter-react';
+import { ToastContainer, toast } from 'react-toastify';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 import Layout from '../components/Layout';
 import Countdown from '../components/Countdown';
@@ -9,9 +17,109 @@ import RoadmapPhase, { phases } from '../components/RoadmapPhase';
 import FAQItem, { items } from '../components/FAQItem';
 import DiscordIcon from '../icons/discord.svg';
 import TwitterIcon from '../icons/twitter.svg';
+import {
+  TREASURY,
+  TX_TIMEOUT,
+  CANDY_MACHINE_ID,
+  CANDY_MACHINE_CONFIG,
+} from '../utils/nfts';
+import {
+  awaitTransactionSignatureConfirmation,
+  getCandyMachineState,
+  mintOneToken,
+} from '../utils/candy-machine';
 
-export default function Home() {
+import 'react-toastify/dist/ReactToastify.css';
+
+export default function Home({ wallets }) {
   const [isActive, setIsActive] = useState(false);
+  const [isSoldOut, setIsSoldOut] = useState(false);
+  const [isMinting, setIsMinting] = useState(false);
+
+  const wallet = useAnchorWallet();
+  const base58 = wallet?.publicKey?.toBase58();
+  const { connection } = useConnection();
+  const { connected } = useWallet();
+  const [candyMachine, setCandyMachine] = useState();
+
+  const handleMint = async () => {
+    if (
+      process.env.NEXT_PUBLIC_PUBLIC_SALE === 'false' &&
+      !wallets.includes(base58)
+    ) {
+      toast.error('You are not allowed to mint during the pre-sale', {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
+      return;
+    }
+
+    try {
+      if (wallet && candyMachine.program) {
+        setIsMinting(true);
+
+        const mintTxId = await mintOneToken(
+          candyMachine,
+          CANDY_MACHINE_CONFIG,
+          wallet.publicKey,
+          TREASURY,
+        );
+        const status = await awaitTransactionSignatureConfirmation(
+          mintTxId,
+          TX_TIMEOUT,
+          connection,
+          'singleGossip',
+          false,
+        );
+
+        if (!status.err) {
+          toast.success("Congratulations! You've got your own NFT!", {
+            position: toast.POSITION.BOTTOM_LEFT,
+          });
+        } else {
+          toast.error('Mint failed! Please try again!', {
+            position: toast.POSITION.BOTTOM_LEFT,
+          });
+        }
+      }
+    } catch (error) {
+      let message = error.msg || 'Minting failed! Please try again!';
+
+      if (!error.msg) {
+        if (error.message.indexOf('0x138')) {
+        } else if (error.message.indexOf('0x137')) {
+          message = `SOLD OUT!`;
+        } else if (error.message.indexOf('0x135')) {
+          message = `Insufficient funds to mint. Please fund your wallet.`;
+        }
+      } else {
+        if (error.code === 311) {
+          message = `SOLD OUT!`;
+        } else if (error.code === 312) {
+          message = `Minting period hasn't started yet.`;
+        }
+      }
+
+      toast.error(message, {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
+    } finally {
+      setIsMinting(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!wallet) return;
+
+    (async () => {
+      const { candyMachine, itemsRemaining, itemsAvailable, itemsRedeemed } =
+        await getCandyMachineState(wallet, CANDY_MACHINE_ID, connection);
+
+      console.log(`Total minted: ${itemsRedeemed}/${itemsAvailable}`);
+
+      setIsSoldOut(itemsRemaining === 0);
+      setCandyMachine(candyMachine);
+    })();
+  }, [wallet, connection]);
 
   return (
     <Layout>
@@ -28,7 +136,31 @@ export default function Home() {
           1,006 uniquely generated operators commissioned to serve and protect
           the solana ecosystem at all cost.
         </p>
-        {/* <Countdown handleComplete={() => setIsActive(true)} /> */}
+        {!isActive ? (
+          <Countdown handleComplete={() => setIsActive(true)} />
+        ) : connected ? (
+          <button
+            className='mint'
+            onClick={handleMint}
+            disabled={!isActive || !wallet || isSoldOut || isMinting}
+            style={{
+              opacity:
+                !isActive || !wallet || isSoldOut || isMinting ? '0.8' : '1',
+              cursor:
+                !isActive || !wallet || isSoldOut
+                  ? 'not-allowed'
+                  : isMinting
+                  ? 'progress'
+                  : 'pointer',
+            }}
+          >
+            {isSoldOut ? 'Sold Out!' : isMinting ? 'Minting...' : 'Mint Now'}
+          </button>
+        ) : (
+          <p className='font-bold text-3xl text-center opacity-70 mx-auto px-4 w-full max-w-xs lg:max-w-2xl mt-8'>
+            Please connect your wallet
+          </p>
+        )}
       </div>
 
       <Carousel />
@@ -171,6 +303,19 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <ToastContainer />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const dataDirectory = path.join(process.cwd(), 'data');
+  const wallets = await fs.readFile(`${dataDirectory}/wallets.json`, 'utf8');
+
+  return {
+    props: {
+      wallets: [JSON.parse(wallets)],
+    },
+  };
 }
