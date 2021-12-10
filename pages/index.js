@@ -156,25 +156,71 @@ export default function Home({ wallets }) {
       <Carousel />
 
       <div id='story' className='px-4 mt-20 lg:mt-40'>
-        <p className='font-black text-center text-6xl'>The Story so far.</p>
+        <p className='font-black text-center text-6xl'>So it begins..</p>
         <div className='story w-full max-w-4xl mt-8 mx-auto p-8'>
           <p className='text-2xl font-bold text-center'>
-            UH OH!
+            A counter flashed out of a monitor screen in the empty war room at
+            the headquarters of Sol Team 6:
             <br />
-            The story’s not finished yet! At the moment we are working with our
-            community members to help get the story just right. We do not want
-            to rush the process as the story will be the foundation for our
-            comic book series! If you are interested in helping us create an
-            epic storyline, join us on{' '}
-            <a
-              href='https://discord.gg/sTWdnq64'
-              target='_blank'
-              rel='noreferrer'
-              className='text-blue-400'
-            >
-              Discord
-            </a>{' '}
-            and check out #story-submissions.
+            SURVIVOR COUNT
+            <br />
+            10
+            <br />
+            9
+            <br />
+            8
+            <br />
+            7
+            <br />
+            6
+            <br />
+            The counter stopped showing in the glitchy monitor and flickered
+            out.
+            <br />
+            Something opened the door with its tentacle arms and looked at the
+            same screen. It punched the screen repeatedly and aggressively, with
+            blood dripping out of the arms.
+            <br />
+            <br />
+            Some time ago...
+            <br />
+            <br />
+            &quot;Welcome to Sol Team 6 recruitment center! Do pick up your
+            starter items and proceed to the briefing room thanks!&quot; said
+            the recruitment officer in front of Yojo. He was the top of his
+            class in every aspect before he graduated in college. An interest in
+            this legendary military group, he applied and passed the theory test
+            with flying colors.
+            <br />
+            <br />
+            As he stepped into the class, he bumped into a person walking out of
+            the room.
+            <br />
+            <br />
+            &quot;Sorry!&quot; he said.
+            <br />
+            <br />
+            The person looked at him with an angry look in his face and left.
+            Yojo noticed that one of his arms were made out of tentacles.
+            <br />
+            <br />
+            As he waited for the briefing to start, the room displayed the
+            recruitment poster that inspired him to apply. It read:
+            <br />
+            <br />
+            We are not your ordinary defenders.
+            <br />
+            We are not here for an eternal time, not here for justice and
+            definitely not here to avenge.
+            <br />
+            We, like you, will work our very best to serve our country to the
+            very best.
+            <br />
+            <br />
+            And if we can&apos;t do it, we will die trying.
+            <br />
+            <br />
+            Join us, and help us protect and improve lives!
           </p>
         </div>
       </div>
