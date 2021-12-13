@@ -1,7 +1,7 @@
 export const phases = [
   {
     title: 'Phase 1 - Launch Sol Team Six',
-    text: 'Launch 1,006 uniquely generated Operators to serve and protect the metaverse! Only on Solana! Launching on December 9th, 2021!',
+    text: 'Launch 606 uniquely generated Operators to serve and protect the metaverse! Only on Solana! Launching on December 9th, 2021!',
   },
   {
     title: 'Phase 2 - SOLD OUT! - Just the beginning',

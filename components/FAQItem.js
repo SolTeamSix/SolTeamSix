@@ -16,7 +16,7 @@ export const items = [
   {
     question: 'What is Sol Team Six?',
     answer:
-      'Sol Team Six is a group of 1,006 uniquely generated operators (NFTs) commissioned to serve and protect the #solana ecosystem at all cost.',
+      'Sol Team Six is a group of 606 uniquely generated operators (NFTs) commissioned to serve and protect the #solana ecosystem at all cost.',
   },
   {
     question: 'How are operators minted?',
